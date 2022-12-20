@@ -97,7 +97,7 @@ class DrawingView(context : Context, attrs : AttributeSet) : View(context, attrs
         return true
     }
 
-    fun setSizeForBrsuh(newSize : Float){
+    fun setSizeForBrush(newSize : Float){
         mBrushSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, newSize, resources.displayMetrics)
 
         mDrawPaint!!.strokeWidth = mBrushSize

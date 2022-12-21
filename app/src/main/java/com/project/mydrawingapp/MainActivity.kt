@@ -3,8 +3,10 @@ package com.project.mydrawingapp
 import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageButton
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
 
@@ -53,4 +55,19 @@ class MainActivity : AppCompatActivity() {
 
         brushDialog.show()
     }
+
+    fun paintClicked(view : View){
+        if(view !== mImageButtonCrrPaint){
+            val imageButton = view as ImageButton
+            val colorTag = imageButton.tag.toString()
+            drawingView?.setColor(colorTag)
+
+            imageButton.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.pallet_selected))
+
+            mImageButtonCrrPaint?.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.pallet_normal))
+
+            mImageButtonCrrPaint = view
+        }
+    }
+
 }

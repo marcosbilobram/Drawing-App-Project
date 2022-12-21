@@ -10,7 +10,6 @@ import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.MotionEvent
 import android.view.View
-import androidx.constraintlayout.widget.ConstraintSet.Motion
 
 class DrawingView(context : Context, attrs : AttributeSet) : View(context, attrs) {
 
